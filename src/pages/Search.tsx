@@ -4,16 +4,12 @@ import {
   IonContent,
   IonHeader,
   IonItem,
-  IonLabel,
-  IonList,
-  IonListHeader,
-  IonPage,
+  IonLabel, IonPage,
   IonSearchbar,
   IonTitle,
-  IonToolbar,
+  IonToolbar
 } from "@ionic/react";
 
-import { caretForwardOutline } from "ionicons/icons";
 
 const Search: React.FC = () => {
   return (
