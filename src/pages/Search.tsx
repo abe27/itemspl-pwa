@@ -1,8 +1,19 @@
 import {
+  IonCard,
+  IonCardContent,
   IonContent,
-  IonHeader, IonItem, IonLabel, IonList, IonListHeader, IonPage, IonSearchbar, IonTitle,
-  IonToolbar
+  IonHeader,
+  IonItem,
+  IonLabel,
+  IonList,
+  IonListHeader,
+  IonPage,
+  IonSearchbar,
+  IonTitle,
+  IonToolbar,
 } from "@ionic/react";
+
+import { caretForwardOutline } from "ionicons/icons";
 
 const Search: React.FC = () => {
   return (
@@ -12,33 +23,39 @@ const Search: React.FC = () => {
           <IonTitle>ค้นหาสินค้า</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen>
+      <IonContent fullscreen class="ion-padding">
         <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large">Tab 1</IonTitle>
           </IonToolbar>
         </IonHeader>
         <IonSearchbar></IonSearchbar>
-        <IonList>
-          <IonListHeader>
-            <IonLabel>Video Games</IonLabel>
-          </IonListHeader>
-          <IonItem>
-            <IonLabel>Pokémon Yellow</IonLabel>
+        <>
+          <IonItem button>
+            <IonLabel>
+              <IonCard>
+                <IonCardContent>
+                  <h3>7115-5255-30</h3>
+                  <p>Default detail</p>
+                  <p>Default detail</p>
+                  <p>Default detail</p>
+                </IonCardContent>
+              </IonCard>
+            </IonLabel>
           </IonItem>
-          <IonItem>
-            <IonLabel>Mega Man X</IonLabel>
+          <IonItem button detail={true}>
+            <IonLabel>
+              <h3>Button Item</h3>
+              <p>Detail set to true - detail arrow displays on both modes</p>
+            </IonLabel>
           </IonItem>
-          <IonItem>
-            <IonLabel>The Legend of Zelda</IonLabel>
+          <IonItem button detail={false}>
+            <IonLabel>
+              <h3>Button Item</h3>
+              <p>Detail set to false - detail arrow hidden on both modes</p>
+            </IonLabel>
           </IonItem>
-          <IonItem>
-            <IonLabel>Pac-Man</IonLabel>
-          </IonItem>
-          <IonItem>
-            <IonLabel>Super Mario World</IonLabel>
-          </IonItem>
-        </IonList>
+        </>
       </IonContent>
     </IonPage>
   );
